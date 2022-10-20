@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <label for="fname">Secret Key :</label>
+  <input type="text" id="key" value=""><br><br>
+  <label for="lname">Partner Account Gid :</label>
+  <input type="text" id="gid" value=""><br><br>
+  <label for="lname">Amount :</label>
+  <input type="text" id="amount" value=""><br><br>
+  <label for="lname">Application Fee :</label>
+  <input type="text" id="fee" value=""><br><br>
+  <label for="lname">Description :</label>
+  <input type="text" id="desc" value=""><br><br>
+  <label for="lname">Redirection Url :</label>
+  <input type="text" id="url" value=""><br><br>
+  <input type="button" value="PAY" onclick="payment()">
+</form> 
+
+<script>
+function payment() {
+  const key = document.getElementById('key').value;
+  const gid = document.getElementById('gid').value;
+  const amount = document.getElementById('amount').value;
+  const fee = document.getElementById('fee').value;
+  const desc = document.getElementById('desc').value;
+  const url = document.getElementById('url').value;
+  window.sp.getApiKey(key);
+  window.sp.pay(amount, fee, 'USD', desc, url);
+}
+</script>
+<script type="text/javascript" src="dist/swirepay-checkout.js" data-id="SwirepayCheckout"
+  data-apiKey="sk_live_Lqba1unBxzNwUC1O0BN43GQWURBb2edS" data-mode="test">
+  </script>
+</body>
+</html>

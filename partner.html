@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <label for="fname">Public Key :</label>
+  <input type="text" id="publicKey" value=""><br><br>
+  <label for="lname">Redirection Url :</label>
+  <input type="text" id="url" value=""><br><br>
+  <input type="button" value="Submit" onclick="partnetAccount()">
+</form> 
+
+<script>
+function partnetAccount() {
+  const publicKey = document.getElementById('publicKey').value;
+  const redirectUrl = document.getElementById('url').value;
+  window.sp.partnerAccount(btoa(publicKey), redirectUrl);
+}
+</script>
+<script type="text/javascript" src="dist/swirepay-checkout.js" data-id="SwirepayCheckout"
+  data-apiKey="sk_live_Lqba1unBxzNwUC1O0BN43GQWURBb2edS" data-mode="test">
+  </script>
+</body>
+</html>

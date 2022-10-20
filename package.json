@@ -1,0 +1,42 @@
+{
+  "name": "swirepay-checkout",
+  "version": "0.5.18",
+  "description": "Swirepay Checkout Library",
+  "main": "dist/swirepay-checkout.js",
+  "module": "lib/index.js",
+  "jsnext:main": "lib/index.js",
+  "scripts": {
+    "build": "rollup -c --environment BUILD:production",
+    "watch": "rollup -c -w",
+    "pretest": "rollup -c",
+    "test": "rollup lib/index.js --format umd --name \"swirepay\" --file bundle.js"
+  },
+  "keywords": [
+    "es6",
+    "modules",
+    "rollup",
+    "bundle",
+    "browser"
+  ],
+  "author": "Swirepay",
+  "license": "Private",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "homepage": "https://www.swirepay.com",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "babelrc-rollup": "^3.0.0",
+    "eslint": "^4.1.1",
+    "rollup": "^0.43.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-watch": "^4.0.0"
+  }
+}

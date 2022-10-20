@@ -1,0 +1,84 @@
+<html>
+
+<head>
+</head>
+
+<body>
+  <button onclick="window.pay(100, 'USD', 'Test US Payment')">Pay now</button>
+  <button onclick="window.pay(100, 'CAD', 'Test CAD Payment', 'https://www.google.com')">Pay now</button>
+  <button onclick="window.sp.cardPayment(
+      100,
+      'test@mail.com',
+      'test',
+      '+919940274492',
+      null,
+      'Test Payment',
+      '4242424242424242',
+      '12',
+      '2024',
+      '123',
+      false
+      )">
+    Pay
+  </button>
+  <button onclick="window.sp.addCard(
+        'Test Payment',
+        '123',
+        '4242424242424242',
+        '12',
+        '2024',
+        null,
+        false
+        )">
+    Add Card
+  </button>
+  <button onclick="window.sp.getPaymentMethod(
+          'paymentmethod-ded8420eb51d4ab089be1bee9f220ea5'
+          )">
+    Get Payment
+  </button>
+  <button onclick="window.sp.upiPayment(
+    100,
+    'test@mail.com',
+    'test',
+    '+919940274492',
+    null,
+    'success@swirepay',
+    false
+    )">
+    Upi Payment
+  </button>
+  <button onclick="window.sp.netBanking(
+    100,
+    'test@mail.com',
+    'test',
+    '+919940274492',
+    null,
+    'swirepaynetbanking-a5c3607951b311ec95d10242ac120002',
+    false
+    )">
+    Net Banking
+  </button>
+  <button onclick="window.sp.qrPayment(
+      100,
+      'test@mail.com',
+      'test',
+      '+919940274492',
+      null,
+      'QR',
+      false
+      )">
+    QR Payment
+  </button>
+  <button onclick="window.sp.partnerAccount(
+      'cGtfbGl2ZV9ZME03ckw1dXRVZUpvQ2dnWHdIckVIRnpyQURYVFdyYQ==',
+      'http://localhost:3000/',
+      )">
+    Partner Account
+  </button>
+</body>
+<script type="text/javascript" src="dist/swirepay-checkout.js" data-id="SwirepayCheckout"
+  data-apiKey="sk_live_Lqba1unBxzNwUC1O0BN43GQWURBb2edS" data-mode="test">
+  </script>
+
+</html>
